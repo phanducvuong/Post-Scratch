@@ -14,7 +14,7 @@ public class BaseScene implements Screen {
     private Game game;
     protected Stage stage;
 
-    public BaseScene(Game game) {
+    BaseScene(Game game) {
         this.game = game;
         PostScratch.SH = PostScratch.SW * Gdx.graphics.getHeight() / Gdx.graphics.getWidth();
         stage = new Stage();
