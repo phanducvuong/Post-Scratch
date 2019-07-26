@@ -7,8 +7,8 @@ import jkstudiogroup.template.PostScratch;
 public class DesktopLauncher {
 	public static void main (String[] arg) {
 		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		config.width = 640;
-		config.width = 720;
+		config.width = 970;
+		config.height = 640;
 		new LwjglApplication(new PostScratch(), config);
 	}
 }

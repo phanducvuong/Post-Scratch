@@ -3,10 +3,8 @@ package jkstudiogroup.template;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-
+import jkstudiogroup.template.Objects.LoadCard;
 import jkstudiogroup.template.scenes.GameScene;
 
 public class PostScratch extends Game {
@@ -17,13 +15,18 @@ public class PostScratch extends Game {
 
 	@Override
 	public void create () {
+
 		assetManager = new AssetManager();
 		LoadAssets();
 		assetManager.finishLoading();
+
+		LoadCard.InitAssets();
+
 		setScreen(new GameScene(this));
 	}
 
 	private void LoadAssets() {
 		assetManager.load("badlogic.jpg", Texture.class);
+		assetManager.load("Card.png", Texture.class);
 	}
 }
